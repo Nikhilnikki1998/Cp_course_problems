@@ -35,4 +35,27 @@
 
 def playstep2(hand, dice):
 	# your code goes here
-	pass
+	s=str(hand)
+	d=str(dice)
+	s=sorted(s,reverse=True)
+	st=[]
+	if len(set(s))==len(s):
+		st.append(s[0])
+		st.append(d[-1])
+		st.append(d[-2])
+		st=sorted(st,reverse=True)
+		li=""
+		for i in st:
+			li+=i	
+		return (int(li),int(d[0:-2]))
+	else:
+		if(s[0]==s[1]):
+			s[2]=d[-1]
+		elif(s[1]==s[2]):
+			s[0]=d[-1]
+		st=sorted(s,reverse=True)
+		li=""
+		for i in st:
+			li+=i	
+		return (int(li),int(d[0:-1]))
+	
