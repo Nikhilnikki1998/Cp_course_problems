@@ -17,8 +17,6 @@ def dicetoorderedhand(a, b, c):
 	sol.append(a)
 	sol.append(b)
 	sol.append(c)
-
-
 	sol=sorted(sol,reverse=True)
 	st=""
 	for i in range(len(sol)):
