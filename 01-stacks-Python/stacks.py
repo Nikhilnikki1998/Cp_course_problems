@@ -18,7 +18,7 @@ class LinkedList(object):
     def append(self, new_element):
         current = self.head
         if self.head:
-            while current.next:
+            while current.next!=None:
                 current = current.next
             current.next = new_element
         else:
@@ -59,7 +59,11 @@ class stack(object):
             return None
         else:
             temp=self.ll
-            self.ll=self.ll.next
+            if(self.ll.next!=None):
+                self.ll=self.ll.next
+            else:
+                self.ll=None
             temp.next=None
-            return temp.data
+            return temp.value
+            
     
