@@ -7,4 +7,11 @@
 
 def isrighttriangle(x1, y1, x2, y2, x3, y3):
 	# your code goes here
-	pass
+	a=(int((x2-x1)**2))+(int((y2-y1)**2))
+	b=(int((x3-x1)**2))+(int((y3-y1)**2))
+	c=(int((x3-x2)**2))+(int((y3-y2)**2))
+	if((a==(b+c) or b==(a+c) or c==(b+a))):
+		return True
+	else:
+
+		return False
