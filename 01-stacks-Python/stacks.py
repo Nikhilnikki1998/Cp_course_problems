@@ -36,7 +36,7 @@ class LinkedList(object):
 
 class stack(object):
     def __init__(self,top=None):
-        self.ll = LinkedList(top)
+        self.ll = top
     def isempty(self):
         if(self.ll==None):
             return True
@@ -58,12 +58,8 @@ class stack(object):
         if(self.isempty()):
             return None
         else:
-            temp=self.ll
-            if(self.ll.next!=None):
-                self.ll=self.ll.next
-            else:
-                self.ll=None
-            temp.next=None
-            return temp.value
+            temp=self.ll.value
+            self.ll=self.ll.next
+            return temp
             
     
