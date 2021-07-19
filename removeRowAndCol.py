@@ -15,14 +15,16 @@
 # list
 # [ [ 2, 3, 4, 5],
 #   [ 8, 7, 6, 5],
-#   [ 0, 1, 2, 3] ]
+#    [ 8, 7, 6, 5],
 
 # result
 # [ [ 2, 3, 5],
 #   [ 0, 1, 3] ]
-
+import numpy as np
 def removeRowAndCol(L, row, col):
     # Your code goes here...
+    arr=[ [ 2, 3, 4, 5], [ 8, 7, 6, 5], [ 8, 7, 6, 5],]
+    arr1=np.delete(arr,())
     pass
 
 # Write your own test cases.
