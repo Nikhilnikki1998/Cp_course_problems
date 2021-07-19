@@ -5,7 +5,7 @@
 def hasconsecutivedigits(n):
 	# your code goes here
     n=abs(n)
-    temp=1
+    temp=0
     while n>0:
         dummy=n%10
         n=n//10
