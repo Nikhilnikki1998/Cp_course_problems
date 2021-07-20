@@ -10,5 +10,17 @@
 # lookAndSay([3,3,8,3,3,3,3]) == [(2,3),(1,8),(4,3)]
 
 def lookandsay(a):
-	# Your code goes here
-	pass
+	    # your code goes here
+    temp= 1
+    li=[]
+    n=len(a)
+    for i in range(n-1):
+        if(a[i]!=a[i+1]):
+            li.append((temp,a[i]))
+            temp=1
+            
+        else:
+            temp = temp+1
+    if(n!=0):
+        li.append((temp,a[n-1]))
+    return li 
