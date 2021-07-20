@@ -15,4 +15,22 @@
 
 def ismostlymagicsquare(a):
 	# Your code goes here
-	pass
+	if((len(a)==1) and (len(a[0])==1) ):
+		return True
+	n = len(a)
+	sumd1=0
+	sumd2=0
+	for i in range(n):
+		sumd1+=a[i][i]
+		sumd2+=a[i][n-i-1]
+	if not(sumd1==sumd2):
+		return False
+	for i in range(n):
+		sumr=0
+		sumc=0
+		for j in range(n):
+			sumr+=a[i][j]
+			sumc+=a[j][i]
+		if not(sumr==sumc==sumd1):
+			return False
+	return True
