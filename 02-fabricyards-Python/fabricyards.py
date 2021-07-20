@@ -11,11 +11,28 @@
 # fabric that must be purchased (as purchases must be in whole yards).
 # Hint: you may want to use fabricyards, which you just wrote!
 
-
+import math
 def fabricyards(inches):
 	# Your code goes here...
-	return 1
+	if(inches==0):
+		return 0
+	elif(inches<36):
+		return 1
+	else:
+		n=inches/36
+		n=math.ceil(n)
+	return n
 
 def fabricexcess(inches):
 	# Your code goes here...
-	return 1
+	if(inches==0):
+		return 0
+	elif(inches>=36):
+		n=inches/36
+		n=math.ceil(n)
+		a=n*36
+		b=a-inches
+		return b
+	else:
+		a=36-inches
+		return a
