@@ -6,5 +6,14 @@
 # repeatedly remove the ones digit until you cannot.
 
 def digitcount(n):
-	# your code goes here
-	pass
+    # your code goes here
+    count=0
+    if(n==0):
+        return 1
+    else:
+        for i in str(n):
+            if(i=="-"):
+                continue
+            count=count+1    
+        return count
+print(digitcount(234))
