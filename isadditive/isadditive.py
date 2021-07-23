@@ -20,7 +20,7 @@ def additive(k):
         a=temp%10
         temp=temp//10
         sum+=((a))
-    if(sum==2 or sum==7 or sum==3 or sum==5):
+    if(sum==2 or sum==3 or sum==5):
         return True
     elif(sum<10):
         return False
