@@ -9,5 +9,25 @@
 # for primality (and you may need to think about that hint for a while for it to make sense!).
 
 
+def isPrime(m):
+    if(m<2):
+      return False
+    for i in range (2,m):
+
+        if(m%i==0):
+            return False
+    
+        return True
+    
 def fun_nth_carolprime(n):
-    return 0
+    
+
+    a=0
+    cnt=0
+    temp=-1
+    while(cnt<=n):
+        temp=((2**a-1)**2-2)
+        if (isPrime(temp)):
+            cnt=cnt+1
+        a=a+1
+    return temp
