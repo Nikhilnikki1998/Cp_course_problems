@@ -4,8 +4,13 @@
 
 
 def fun_isrectangular(l):
-	# Your code goes here...
-	return False
+	
+    for i in l:
+        row1=len(i)
+        row2=len(l[0])
+        if row1!=row2:
+            return False
+    return True
 
 
 
