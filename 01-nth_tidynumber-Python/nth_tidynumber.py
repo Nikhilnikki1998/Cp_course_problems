@@ -5,21 +5,23 @@
 # fun_nth_tidynumber(5) = 6
 # fun_nth_tidynumber(15) = 17
 # fun_nth_tidynumber(35) = 46
-
-def tidy(n):
-    a=n%10
-    b=n//10
-    if(a>b):
-        return True
-    else:
-        return False
+def check(x):
+    a=10
+    while(x):
+        cnt=x%10
+        x=x//10
+        if(cnt>a):
+            return False
+        a=cnt
+    return True   
 
 def fun_nth_tidynumber(n):
-    count=-1
-    if(n==0):
-        return 1
-    if(tidy(n)==True):
+    
+    n=abs(n)
+    cnt=0
+    count=0
+    while(cnt<=n):
         count=count+1
-    if(count==n):
-        return count
-print(fun_nth_tidynumber(1))
+        if(check(count)):
+            cnt=cnt+1
+    return count
