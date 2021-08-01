@@ -6,7 +6,19 @@
 # returns "be". Note that digits, punctuation, and whitespace are not letters! Also note that seeing as we have not 
 # yet covered lists, sets, maps, or efficiency, you are not expected to write the most efficient solution. Finally, 
 # if s does not contain any alphabetic characters, the result should be the empty string ("")
-
+import string
 def leastfrequentletters(s):
-	# Your code goes here
-	pass
+    a=s.lower()
+    m=""
+    n=string.ascii_lowercase
+
+    for i in n:
+        count=0
+        for j in range(0,len(s)):
+            if(i==a[j]):
+                count=count+1
+                #return count
+        if(count==1):
+            m=m+i
+    return m
+
