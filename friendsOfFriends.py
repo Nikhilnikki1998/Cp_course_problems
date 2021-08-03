@@ -25,5 +25,16 @@ Thus, in this example, friendsOfFriends should return:
 '''
 
 def friendsOfFriends(d):
-    # Your code goes here...
-    return None
+    a=dict()
+    for i in d:
+        for j in d[i]:
+            if i not in a:
+                a[i]=set()
+            if j in d:
+                for k in d[j]:
+                    if i!=k and (k not in d[i]):
+                        a[i].add(k)
+    for i in d:
+        if i not in a:
+            a[i]=[]
+    return a
