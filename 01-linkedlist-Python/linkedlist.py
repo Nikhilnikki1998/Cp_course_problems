@@ -9,12 +9,12 @@ Then, use "Test Run" and "Submit" to run the test cases
 at the bottom."""
 
 class Element(object):
-    def _init_(self, value):
+    def __init__(self, value):
         self.value = value
         self.next = None
         
 class LinkedList(object):
-    def _init_(self, head=None):
+    def __init__(self, head=None):
         self.head = head
         
     def append(self, new_element):
@@ -43,6 +43,7 @@ class LinkedList(object):
             count+= 1
         return None
 
+
     
     def insert(self, new_element, position):
         """Insert a new node at the given position.
@@ -62,6 +63,7 @@ class LinkedList(object):
         elif (position==1):
             new_element.next=self.head
             self.head=new_element
+
 
     
     
