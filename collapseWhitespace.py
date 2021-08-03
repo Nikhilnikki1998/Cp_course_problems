@@ -15,8 +15,12 @@
 # You should not use a regular expression library.
 
 def cw(s):
-    # Your code goes here...
-    return ""
+    a=""
+    for i in s.split():
+        if i.isalpha():
+            a=a+i+" "
+    a=a.strip()
+    return a
 
 assert(cw("a\nb") == "a b")
 assert(cw("a\n   \t    b") == "a b")
