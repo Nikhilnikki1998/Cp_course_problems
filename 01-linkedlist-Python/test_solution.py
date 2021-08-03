@@ -1,4 +1,3 @@
-
 import os,sys
 sys.path.append(os.getcwd())
 from linkedlist import LinkedList 
@@ -28,4 +27,3 @@ def test_insert(position,result):
 def test_delete(val,result):
     ll.delete(1)
     assert ll.get_position(val).value == result
-
