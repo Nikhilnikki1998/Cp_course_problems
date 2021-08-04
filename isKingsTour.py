@@ -18,6 +18,18 @@
 # returns True if it represents a legal Kings Tour 
 # and False otherwise.
 
-def isKingsTour(board):
-    # Your code goes here...
-    pass
+def isKingsTour(L):
+
+    a=len(L)
+    b=len(L[0]) 
+    for c in range(a*b):
+        for o in range(a):
+            for i in range(b):
+                if c==L[o][i]:
+                    if not (
+                        (L[abs((o+1))%a][abs((i+1))%b]==L[o][i]+1) or (L[abs((o+1))%a][abs((i-1))%b]==L[o][i]+1) or  (L[abs((o-1))%a][abs((i+1))%b]==L[o][i]+1) or
+                        (L[abs((o-1))%a][abs((i-1))%b]==L[o][i]+1) or (L[abs((o+1))%a][abs(i)%b]==L[o][i]+1) or (L[abs((o-1))%a][abs(i)%b]==L[o][i]+1) or
+                        (L[abs((o))%a][abs((i+1))%b]==L[o][i]+1) or (L[abs((o))%a][abs((i-1))%b]==L[o][i]+1)):
+                        return False
+                    
+    return True
