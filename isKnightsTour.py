@@ -29,9 +29,24 @@
 # assert(isKnightsTour(board)==True)
 
 
-def isKnightsTour(board):
-    # Your code goes here...
-    pass
+def isKnightsTour(L):
+    
+    # your code goes here
+    a=len(L)
+    b=len(L[0]) 
+    for c in range(a*b):
+        for o in range(a):
+            for i in range(b):
+                if c==L[o][i]:
+                    if not (
+                        (L[abs((o+2))%a][abs((i+1))%b]==L[o][i]+1) or (L[abs((o+2))%a][abs((i-1))%b]==L[o][i]+1) or (L[abs((o-2))%a][abs((i+1))%b]==L[o][i]+1) or
+                    
+                        (L[abs((o-2))%a][abs((i-1))%b]==L[o][i]+1) or (L[abs((o+1))%a][abs((i+2))%b]==L[o][i]+1) or (L[abs((o+1))%a][abs((i-2))%b]==L[o][i]+1) or
+                        
+                        (L[abs((o-1))%a][abs((i+2))%b]==L[o][i]+1) or (L[abs((o-1))%a][abs((i-2))%b]==L[o][i]+1)):
+                        return False
+                    
+    return True
 
 board = [
             [  1, 60, 39, 34, 31, 18,  9, 64 ],
